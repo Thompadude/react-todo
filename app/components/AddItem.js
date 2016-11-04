@@ -13,12 +13,17 @@ class AddItem extends React.Component {
     }
 
     addItem() {
-        var toDoItems = this.state.items;
-        toDoItems.push(this.state.inputItem);
-        this.setState({
-            items: toDoItems,
-            inputItem: ''
-        });
+        if (!(this.state.inputItem === '')) {
+            var toDoItems = this.state.items;
+            toDoItems.push(this.state.inputItem);
+
+            this.setState({
+                items: toDoItems,
+                inputItem: ''
+            });
+        } else {
+            alert('Fill in something to do')
+        }
     }
 
     onChange(event) {
