@@ -1,5 +1,7 @@
+require('../resources/stylesheets/scss/addItem.scss');
+
 var React = require('react');
-var ToDoList = require('./ToDoList')
+var ToDoList = require('./ToDoList');
 
 class AddItem extends React.Component {
     constructor(props) {
@@ -31,7 +33,7 @@ class AddItem extends React.Component {
     }
 
     render() {
-        return <div>
+        return <div className="wrapper">
             <input type='text' value={this.state.inputItem} onChange={this.onChange}/>
             <br />
             <button onClick={this.addItem}>{this.props.buttonText}</button>
