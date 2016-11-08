@@ -1,0 +1,16 @@
+body {
+  background-color: #2A81BF;
+  margin: 2.5rem 0 0 2.5rem; }
+
+.addItemWrapper {
+  display: inline;
+  position: relative; }
+  .addItemWrapper input {
+    margin-right: 1rem;
+    position: absolute; }
+  .addItemWrapper button {
+    position: absolute;
+    right: -255px;
+    top: 0; }
+
+/*# sourceMappingURL=index.css.map */
