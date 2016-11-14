@@ -11,15 +11,14 @@ class App extends React.Component {
     }
 
     handleChange(event) {
-        this.setState({
-            name: event.target.value
-        })
+        this.setState({name: event.target.value})
     }
 
     render() {
+        var welcomeText = (<h3> {this.state.name == '' ? 'Type your name above :-)' : 'Welcome ' + this.state.name + '!'} </h3>)
         return <div>
             <input placeholder="Your name" onChange={this.handleChange}/>
-            <h1 className="headline">Welcome {this.state.name}</h1>
+            <h1 className="headline">{welcomeText}</h1>
             <ToDo />
         </div>
     }
