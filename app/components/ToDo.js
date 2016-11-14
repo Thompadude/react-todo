@@ -2,11 +2,15 @@ var React = require('react');
 
 var ToDoAdd = require('./ToDoAdd');
 var ToDoList = require('./ToDoList');
+var ToDoListSaved = require('./ToDoListSaved');
 
 class ToDo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {items: []};
+        this.state = {
+            items: [],
+            lists: []
+        };
     }
 
     handleAddItem(item) {

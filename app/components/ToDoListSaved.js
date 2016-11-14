@@ -1,6 +1,8 @@
 var React = require('react');
 
-class ToDoList extends React.Component {
+var ToDoList = require('./ToDoList');
+
+class ToDoListSaved extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -9,9 +11,9 @@ class ToDoList extends React.Component {
         return (
             <ul>
                 {
-                    this.props.items.map(
-                        (item, i) => {
-                            return <li key={i}>{item}</li>
+                    this.props.lists.map(
+                        (list) => {
+                            return <ToDoList items={list}/>
                         }
                     )
                 }
@@ -20,4 +22,4 @@ class ToDoList extends React.Component {
     }
 }
 
-module.exports = ToDoList;
+module.exports = ToDoListSaved;
