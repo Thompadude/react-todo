@@ -7,10 +7,15 @@ var ToDoListSaved = require('./ToDoListSaved');
 class ToDo extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             items: [],
             lists: []
         };
+
+        // These binding is necessary to make `this` work in the callback
+        this.handleAddItem = this.handleAddItem.bind(this);
+        this.handleAddList = this.handleAddList.bind(this);
     }
 
     handleAddItem(item) {
@@ -32,10 +37,10 @@ class ToDo extends React.Component {
     render() {
         return (
             <div>
-                <ToDoAdd handleAddItem={this.handleAddItem.bind(this)}/>
+                <ToDoAdd handleAddItem={this.handleAddItem}/>
                 <br/>
                 <ToDoList items={this.state.items}/>
-                <ToDoListSaved lists={this.state.lists} handleAddList={this.handleAddList.bind(this)}/>
+                <ToDoListSaved lists={this.state.lists} handleAddList={this.handleAddList}/>
             </div>
         )
     }
