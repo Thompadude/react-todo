@@ -1,5 +1,6 @@
 body {
   background-color: #1B98A6;
+  font-family: sans-serif;
   margin: 2.5rem 0 0 2.5rem; }
 
 .addItemWrapper {
@@ -11,8 +12,22 @@ body {
     position: absolute; }
   .addItemWrapper button {
     position: absolute;
-    right: -255px;
+    right: -280px;
     top: 0; }
+
+.button {
+  border: none;
+  border-radius: 3px;
+  padding: 3px 9px 3px 9px;
+  background-color: #8CF2F2; }
+  .button:hover {
+    background-color: #243E73;
+    color: #8CF2F2; }
+
+.input {
+  border: none;
+  border-radius: 3px;
+  padding: 3px 9px 3px 9px; }
 
 .headline {
   color: #243E73; }

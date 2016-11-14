@@ -26,8 +26,8 @@ class ToDoAdd extends React.Component {
     render() {
         return (
             <div className="addItemWrapper">
-                <input type='text' value={this.state.inputValue} onChange={this.handleOnChange}/>
-                <button onClick={this.handleClick}>Add To-Do</button>
+                <input className="input" type='text' value={this.state.inputValue} onChange={this.handleOnChange}/>
+                <button className="button" onClick={this.handleClick}>Add To-Do</button>
             </div>
         )
     }

@@ -15,12 +15,14 @@ class App extends React.Component {
     }
 
     render() {
-        var welcomeText = (<h3> {this.state.name == '' ? 'Type your name above :-)' : 'Welcome ' + this.state.name + '!'} </h3>)
-        return <div>
-            <input placeholder="Your name" onChange={this.handleChange}/>
-            <h1 className="headline">{welcomeText}</h1>
-            <ToDo />
-        </div>
+        var welcomeText = (<h3 className="headline"> {this.state.name == '' ? 'Type your name above :-)' : 'Welcome ' + this.state.name + '!'} </h3>)
+        return (
+            <div>
+                <input className="input" placeholder="Your name" onChange={this.handleChange}/>
+                {welcomeText}
+                <ToDo />
+            </div>
+        )
     }
 }
 

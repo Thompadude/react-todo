@@ -15,20 +15,21 @@ class ToDoListSaved extends React.Component {
     }
 
     render() {
-        var button = (<button onClick={this.handleButtonClick}>
-            { this.props.lists.length < 1 ? 'Save your first list!' : 'Add more lists' }
+        var button = (<button className="button" onClick={this.handleButtonClick}>
+            { this.props.lists.length < 1 ? 'Save your first list!' : 'Save List' }
         </button>);
 
         if (this.props.lists.length < 1) {
             return (
                 <div>
-                    <p>You have no saved lists yet!</p>
+                    <h1 className="headline">No saved lists yet!</h1>
                     {button}
                 </div>
             )
         } else {
             return (
                 <div>
+                    {button}
                     <h1 className="headline">Saved Lists</h1>
                     <ul>
                         {this.props.lists.map((list, i) => {
@@ -39,7 +40,6 @@ class ToDoListSaved extends React.Component {
                             )
                         })}
                     </ul>
-                    {button}
                 </div>
             )
         }
