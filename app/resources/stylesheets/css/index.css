@@ -1,8 +1,9 @@
 body {
-  background-color: #2A81BF;
+  background-color: #1B98A6;
   margin: 2.5rem 0 0 2.5rem; }
 
 .addItemWrapper {
+  color: #243E73;
   display: inline;
   position: relative; }
   .addItemWrapper input {
@@ -12,5 +13,8 @@ body {
     position: absolute;
     right: -255px;
     top: 0; }
+
+.headline {
+  color: #243E73; }
 
 /*# sourceMappingURL=index.css.map */

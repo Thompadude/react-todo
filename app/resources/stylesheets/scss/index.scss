@@ -1,4 +1,5 @@
-$primary-color: #2A81BF;
+$primary-color: #1B98A6;
+$text-color: #243E73;
 
 body {
   background-color: $primary-color;
@@ -6,6 +7,7 @@ body {
 }
 
 .addItemWrapper {
+  color: $text-color;
   display: inline;
   position: relative;
   input {
@@ -17,4 +19,8 @@ body {
     right: -255px;
     top: 0;
   }
+}
+
+.headline {
+  color: $text-color;
 }

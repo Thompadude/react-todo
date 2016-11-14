@@ -1,36 +1,31 @@
 var React = require('react');
 
-class AddItem extends React.Component {
+class ToDoAdd extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            inputItem: ''
+            inputValue: ''
         };
-        this.addItem = this.addItem.bind(this);
-        this.onChange = this.onChange.bind(this);
     }
 
-    addItem() {
-        if (!(this.state.inputItem === '')) {
-            // TODO send item to ToDoList
-        } else {
-            alert('Fill in something to do')
-        }
+    handleClick() {
+        var item = this.state.inputValue;
+        this.props.handleAddItem(item);
+        this.setState({inputValue: ''});
     }
 
-    onChange(event) {
-        this.setState({inputItem: event.target.value})
+    handleOnChange(event) {
+        this.setState({inputValue: event.target.value});
     }
 
     render() {
         return (
             <div className="addItemWrapper">
-                <input type='text' value={this.state.inputItem} onChange={this.onChange}/>
-                <br />
-                <button onClick={this.addItem}>Add To-Do</button>
+                <input type='text' value={this.state.inputValue} onChange={this.handleOnChange.bind(this)}/>
+                <button onClick={this.handleClick.bind(this)}>Add To-Do</button>
             </div>
         )
     }
 }
 
-module.exports = AddItem;
+module.exports = ToDoAdd;
