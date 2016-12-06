@@ -14,7 +14,11 @@ class ToDoAdd extends React.Component {
     }
 
     handleClick() {
-        var item = this.state.inputValue;
+        var item = {
+            markedDone: false,
+            text: this.state.inputValue
+        };
+
         this.props.handleAddItem(item);
         this.setState({inputValue: ''});
     }

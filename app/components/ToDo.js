@@ -19,7 +19,7 @@ class ToDo extends React.Component {
     }
 
     handleAddItem(item) {
-        if (item.length > 0) {
+        if (item.text.length > 0) {
             var itemList = this.state.items;
             itemList.push(item);
             this.setState({items: itemList})

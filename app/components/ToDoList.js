@@ -5,10 +5,23 @@ class ToDoList extends React.Component {
         super(props);
     }
 
+    handleClick(item) {
+        item.markedDone = !item.markedDone;
+
+        // TODO is this correct?
+        this.forceUpdate();
+        console.log(item)
+    }
+
     render() {
         return (
+            // TODO move this style to CSS.
             <ul>{this.props.items.map((item, i) => {
-                return <li key={i}>{item}</li>
+                if (!item.markedDone) {
+                    return <li key={i} onClick={this.handleClick.bind(this, item)}>{item.text}</li>
+                } else {
+                    return <li style={{textDecoration: 'line-through'}} key={i} onClick={this.handleClick.bind(this, item)}>{item.text}</li>
+                }
             })}
             </ul>
         )
