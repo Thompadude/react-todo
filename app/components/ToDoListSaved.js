@@ -35,7 +35,7 @@ class ToDoListSaved extends React.Component {
                         {this.props.lists.map((list, i) => {
                             return (<li key={i}>
                                     <p>List {i + 1}</p>
-                                    <ToDoList items={list}/>
+                                    <ToDoList items={list} isListSaved={true} listIndex={i} handleMarkAsDone={this.props.handleMarkAsDone}/>
                                 </li>
                             )
                         })}

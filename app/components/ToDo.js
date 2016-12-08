@@ -16,6 +16,7 @@ class ToDo extends React.Component {
         // These binding is necessary to make `this` work in the callback
         this.handleAddItem = this.handleAddItem.bind(this);
         this.handleAddList = this.handleAddList.bind(this);
+        this.handleMarkAsDone = this.handleMarkAsDone.bind(this);
     }
 
     handleAddItem(item) {
@@ -34,13 +35,19 @@ class ToDo extends React.Component {
         this.setState({items: [], lists: lists});
     }
 
+    handleMarkAsDone(listIndex, itemIndex) {
+        var lists = this.state.lists;
+        lists[listIndex][itemIndex].markedDone = !lists[listIndex][itemIndex].markedDone;
+        this.setState({lists: lists});
+    }
+
     render() {
         return (
             <div>
                 <ToDoAdd handleAddItem={this.handleAddItem}/>
                 <br/>
                 <ToDoList items={this.state.items}/>
-                <ToDoListSaved lists={this.state.lists} handleAddList={this.handleAddList}/>
+                <ToDoListSaved lists={this.state.lists} handleAddList={this.handleAddList} handleMarkAsDone={this.handleMarkAsDone}/>
             </div>
         )
     }

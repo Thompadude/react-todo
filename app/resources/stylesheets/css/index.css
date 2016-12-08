@@ -32,4 +32,7 @@ body {
 .headline {
   color: #243E73; }
 
+.strikethrough {
+  text-decoration: line-through; }
+
 /*# sourceMappingURL=index.css.map */
