@@ -9,6 +9,8 @@ class ToDoList extends React.Component {
     }
 
     handleClick(itemIndex) {
+        // If the list in which the user is trying to mark an item done is still in progress, thus not saved - show an alert.
+        // This prop is set to true from ToDoListSaved.js
         if (this.props.isListSaved) {
             this.props.handleMarkAsDone(this.props.listIndex, itemIndex);
         } else {
