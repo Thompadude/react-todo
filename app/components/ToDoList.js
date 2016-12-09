@@ -20,7 +20,6 @@ class ToDoList extends React.Component {
 
     render() {
         return (
-            // TODO move this style to CSS.
             <ul>{this.props.items.map((item, i) => {
 
                 // TODO Might not be optimal to handle it this way.
