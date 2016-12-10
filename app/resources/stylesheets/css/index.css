@@ -35,4 +35,11 @@ body {
 .strikethrough {
   text-decoration: line-through; }
 
+.example-appear {
+  opacity: 0.01; }
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
 /*# sourceMappingURL=index.css.map */
