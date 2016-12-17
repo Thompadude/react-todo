@@ -3,6 +3,11 @@ body {
   font-family: sans-serif;
   margin: 2.5rem 0 0 2.5rem; }
 
+ul li p {
+  list-style: square inside none; }
+ul li ul {
+  list-style: circle inside none; }
+
 .addItemWrapper {
   color: #243E73;
   display: inline;

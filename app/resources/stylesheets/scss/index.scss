@@ -20,6 +20,17 @@ body {
   margin: 2.5rem 0 0 2.5rem;
 }
 
+ul {
+  li {
+    p {
+      list-style: square inside none;
+    }
+    ul {
+      list-style: circle inside none;
+    }
+  }
+}
+
 .addItemWrapper {
   color: $text-color;
   display: inline;
