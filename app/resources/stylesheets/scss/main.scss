@@ -18,8 +18,11 @@ ul {
       list-style: none inside none;
       li {
         border-bottom: 1px solid black;
+        margin: 10px 0 0 0;
+        transition: font .15s ease-in;
         &:hover {
           cursor: pointer;
+          font-size: 125%;
         }
       }
       li:last-child {
@@ -47,6 +50,7 @@ ul {
 .button {
   @include border-none_small-radius_small-padding();
   background-color: $fourth-color;
+  transition: background-color .1s ease-in, color .1s ease-in;
   &:hover {
     background-color: $third-color;
     color: $fourth-color;
