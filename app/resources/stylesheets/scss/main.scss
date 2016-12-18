@@ -1,5 +1,6 @@
-@import 'variables';
+@import 'animations';
 @import 'mixins';
+@import 'variables';
 
 body {
   background-color: $primary-color;
@@ -41,13 +42,4 @@ body {
 
 .strikethrough {
   text-decoration: line-through;
-}
-
-.example-appear {
-  opacity: 0.01;
-}
-
-.example-appear.example-appear-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
 }
