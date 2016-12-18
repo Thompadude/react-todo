@@ -1,18 +1,5 @@
-$primary-color: #1B98A6;
-$secondary-color: #A63F5A;
-$third-color: #243E73;
-$fourth-color: #8CF2F2;
-$fifth-color: #30591D;
-
-$text-color: #243E73;
-
-$border-radius-standard: 3px;
-
-@mixin border-none-3px-padding() {
-  border: none;
-  border-radius: $border-radius-standard;
-  padding: 3px 9px 3px 9px;
-}
+@import 'variables';
+@import 'mixins';
 
 body {
   background-color: $primary-color;
@@ -47,7 +34,7 @@ ul {
 }
 
 .button {
-  @include border-none-3px-padding();
+  @include border-none_small-radius_small-padding();
   background-color: $fourth-color;
   &:hover {
     background-color: $third-color;
@@ -56,7 +43,7 @@ ul {
 }
 
 .input {
-  @include border-none-3px-padding();
+  @include border-none_small-radius_small-padding();
 }
 
 .headline {
