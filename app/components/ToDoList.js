@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 class ToDoList extends React.Component {
     constructor(props) {
@@ -20,19 +21,23 @@ class ToDoList extends React.Component {
 
     render() {
         return (
-            <ul>{this.props.items.map((item, i) => {
+            <ReactCSSTransitionGroup transitionName="fade-in"
+                                     transitionAppear={true} transitionAppearTimeout={500}
+                                     transitionEnter={false} transitionLeave={false}>
 
-                // TODO Might not be optimal to handle it this way.
-                // Check comments on http://derpturkey.com/react-pass-value-with-onclick/
-                var handleClick = this.handleClick.bind(this, i);
+                <ul>{this.props.items.map((item, i) => {
+                    // TODO Might not be optimal to handle it this way.
+                    // Check comments on http://derpturkey.com/react-pass-value-with-onclick/
+                    var handleClick = this.handleClick.bind(this, i);
 
-                if (!item.markedDone) {
-                    return <li key={i} onClick={handleClick}>{item.text}</li>
-                } else {
-                    return <li className="completed-item" key={i} onClick={handleClick}>{item.text}</li>
-                }
-            })}
-            </ul>
+                    if (!item.markedDone) {
+                        return <li key={i} onClick={handleClick}>{item.text}</li>
+                    } else {
+                        return <li className="completed-item" key={i} onClick={handleClick}>{item.text}</li>
+                    }
+                })}
+                </ul>
+            </ReactCSSTransitionGroup>
         )
     }
 }
