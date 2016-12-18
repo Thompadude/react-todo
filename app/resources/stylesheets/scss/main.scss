@@ -8,18 +8,28 @@ body {
 }
 
 ul {
+  width: 100px;
   li {
     p {
       list-style: square inside none;
     }
     ul {
-      list-style: circle inside none;
+      list-style: none inside none;
+      li {
+        border-bottom: 1px solid black;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      li:last-child {
+        border: none;
+      }
     }
   }
 }
 
 .addItemWrapper {
-  color: $text-color;
+  color: $third-color;
   display: inline;
   position: relative;
   input {
@@ -42,14 +52,14 @@ ul {
   }
 }
 
+.completed-item {
+  color: #008CA6;
+}
+
 .input {
   @include border-none_small-radius_small-padding();
 }
 
 .headline {
-  color: $text-color;
-}
-
-.strikethrough {
-  text-decoration: line-through;
+  color: $third-color;
 }

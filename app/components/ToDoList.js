@@ -29,7 +29,7 @@ class ToDoList extends React.Component {
                 if (!item.markedDone) {
                     return <li key={i} onClick={handleClick}>{item.text}</li>
                 } else {
-                    return <li className="strikethrough" key={i} onClick={handleClick}>{item.text}</li>
+                    return <li className="completed-item" key={i} onClick={handleClick}>{item.text}</li>
                 }
             })}
             </ul>
