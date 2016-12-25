@@ -9,7 +9,6 @@ body {
 }
 
 ul {
-  width: 100px;
   li {
     p {
       list-style: square inside none;
@@ -17,9 +16,11 @@ ul {
     ul {
       list-style: none inside none;
       li {
-        border-bottom: 1px solid black;
+        border-bottom: 2px solid $primary-color-alternative-tint;
         margin: 10px 0 0 0;
         transition: font .15s ease-in;
+        width: 50%;
+        word-break: break-all;
         &:hover {
           cursor: pointer;
           font-size: 125%;
@@ -58,7 +59,7 @@ ul {
 }
 
 .completed-item {
-  color: #008CA6;
+  color: $primary-color-alternative-tint;
 }
 
 .input {
