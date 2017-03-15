@@ -1,27 +1,29 @@
 var React = require('react');
-var AddItem = require('./AddItem');
-var ToDoList = require('./ToDoList');
 
-class App extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {name: 'Thompa'}
-    this.handleChange = this.handleChange.bind(this);
-  }
+var ToDo = require('./ToDo');
 
-  handleChange(event) {
-    this.setState({
-      name: event.target.value
-    })
-  }
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {name: ''};
 
-  render() {
-    return <div>
-    <input placeholder="Your name" onChange={this.handleChange}></input>
-    <h1>Welcome {this.state.name}</h1>
-    <AddItem buttonText="Add To-Do"/>
-    </div>
-  }
-};
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({name: event.target.value})
+    }
+
+    render() {
+        var welcomeText = (<h3 className="headline"> {this.state.name == '' ? 'Type your name above :-)' : 'Welcome ' + this.state.name + '!'} </h3>)
+        return (
+            <div>
+                <input className="input" placeholder="Your name" onChange={this.handleChange}/>
+                {welcomeText}
+                <ToDo />
+            </div>
+        )
+    }
+}
 
 module.exports = App;

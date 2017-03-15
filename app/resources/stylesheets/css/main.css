@@ -1,0 +1,63 @@
+.fade-in-appear {
+  opacity: 0.01; }
+
+.fade-in-appear.fade-in-appear-active {
+  opacity: 1;
+  transition: opacity .25s ease-in; }
+
+/* Main Colors */
+body {
+  background-color: #1B98A6;
+  font-family: sans-serif;
+  margin: 2.5rem 0 0 2.5rem; }
+
+ul li p {
+  list-style: square inside none; }
+ul li ul {
+  list-style: none inside none; }
+  ul li ul li {
+    border-bottom: 2px solid #008CA6;
+    margin: 10px 0 0 0;
+    transition: font .15s ease-in;
+    width: 50%;
+    word-break: break-all; }
+    ul li ul li:hover {
+      cursor: pointer;
+      font-size: 125%; }
+  ul li ul li:last-child {
+    border: none; }
+
+.addItemWrapper {
+  color: #243E73;
+  display: inline;
+  position: relative; }
+  .addItemWrapper input {
+    margin-right: 1rem;
+    position: absolute; }
+  .addItemWrapper button {
+    position: absolute;
+    right: -280px;
+    top: 0; }
+
+.button {
+  border: none;
+  border-radius: 3px;
+  padding: 3px 9px 3px 9px;
+  background-color: #8CF2F2;
+  transition: background-color .1s ease-in, color .1s ease-in; }
+  .button:hover {
+    background-color: #243E73;
+    color: #8CF2F2; }
+
+.completed-item {
+  color: #008CA6; }
+
+.input {
+  border: none;
+  border-radius: 3px;
+  padding: 3px 9px 3px 9px; }
+
+.headline {
+  color: #243E73; }
+
+/*# sourceMappingURL=main.css.map */

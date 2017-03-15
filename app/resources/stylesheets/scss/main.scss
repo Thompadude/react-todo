@@ -1,0 +1,71 @@
+@import 'animations';
+@import 'mixins';
+@import 'variables';
+
+body {
+  background-color: $primary-color;
+  font-family: sans-serif;
+  margin: 2.5rem 0 0 2.5rem;
+}
+
+ul {
+  li {
+    p {
+      list-style: square inside none;
+    }
+    ul {
+      list-style: none inside none;
+      li {
+        border-bottom: 2px solid $primary-color-alternative-tint;
+        margin: 10px 0 0 0;
+        transition: font .15s ease-in;
+        width: 50%;
+        word-break: break-all;
+        &:hover {
+          cursor: pointer;
+          font-size: 125%;
+        }
+      }
+      li:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+.addItemWrapper {
+  color: $third-color;
+  display: inline;
+  position: relative;
+  input {
+    margin-right: 1rem;
+    position: absolute;
+  }
+  button {
+    position: absolute;
+    right: -280px;
+    top: 0;
+  }
+}
+
+.button {
+  @include border-none_small-radius_small-padding();
+  background-color: $fourth-color;
+  transition: background-color .1s ease-in, color .1s ease-in;
+  &:hover {
+    background-color: $third-color;
+    color: $fourth-color;
+  }
+}
+
+.completed-item {
+  color: $primary-color-alternative-tint;
+}
+
+.input {
+  @include border-none_small-radius_small-padding();
+}
+
+.headline {
+  color: $third-color;
+}
